@@ -99,7 +99,7 @@ class APIClient {
    * Register a new user account
    */
   async signup(data: SignupRequest): Promise<AuthResponse> {
-    const response = await this.request<AuthResponse>('/api/auth/signup', {
+    const response = await this.request<AuthResponse>('api/auth/signup', {
       method: 'POST',
       body: JSON.stringify(data),
     });
